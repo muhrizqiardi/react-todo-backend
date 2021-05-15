@@ -35,6 +35,10 @@ app.get("/", (req, res) => {
     res.send("<p>Welcome to To Do API</p>")
 })
 
+app.get("/todo", (req, res) => {
+    res.sendFile("./todo.json");
+})
+
 // Get all of todos
 app.get("/api/todo", todoAll);
 
