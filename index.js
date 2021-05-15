@@ -31,6 +31,10 @@ mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log(err)
     });
 
+app.get("/", (req, res) => {
+    res.send("<p>Welcome to To Do API</p>")
+})
+
 // Get all of todos
 app.get("/api/todo", todoAll);
 
